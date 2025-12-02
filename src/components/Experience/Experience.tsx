@@ -9,8 +9,8 @@ export default function Experience() {
                     Experience
                 </Typography>
                 <Divider textAlign="left"><Chip label="Accenture Inc." size="small" /></Divider>
-                <Divider textAlign="left"><Chip label="Accenture Inc." size="small" /></Divider>
-                <Divider textAlign="left"><Chip label="Accenture Inc." size="small" /></Divider>
+                <Divider textAlign="left"><Chip label="i4one Inc." size="small" /></Divider>
+                <Divider textAlign="left"><Chip label="Aktus Global Inc." size="small" /></Divider>
             </Stack>
         </CardContent>
     </Card>
