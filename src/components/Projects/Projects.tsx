@@ -1,6 +1,7 @@
 import { Card, CardContent, Typography, Stack } from '@mui/material'
 
 export default function Projects() {
+
   return (
     <Card variant="outlined">
         <CardContent>
