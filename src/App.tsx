@@ -4,8 +4,7 @@ import Profile from './components/Profile/Profile'
 import About from './components/About/About'
 import Experience from './components/Experience/Experience'
 import Projects from './components/Projects/Projects'
-import Blogs from './components/Blogs/Blogs'
-import Testimonials from './components/Testimonials/Testimonials'
+import Recommendations from './components/Recommendations/Recommendations'
 import TechStack from './components/TechStack/TechStack'
 function App() {
 
@@ -25,8 +24,7 @@ function App() {
           </Grid>
         </Grid>
         <Projects/>
-        <Blogs/>
-        <Testimonials/>
+        <Recommendations/>
       </Stack>
     </Container>
   )

@@ -1,5 +1,5 @@
 import { Grid, Typography, Stack, Button, Box } from '@mui/material'
-import { EventNoteOutlined, EmailOutlined } from '@mui/icons-material'
+import { Calendar, Mail } from 'lucide-react'
 
 export default function Profile() {
   return (
@@ -20,16 +20,16 @@ export default function Profile() {
       <Grid size={9.5}>
         <Stack spacing={1}>
           <Typography variant="h6" gutterBottom sx={{ fontFamily: 'Poppins, sans-serif', color: 'black', fontWeight: 'bold' }}>Neil James Tony Perdigon</Typography>
-          <Typography variant="subtitle2" sx={{ color: 'black' }}>📍 Metro Manila, Philippines</Typography>
-          <Typography variant="subtitle1" sx={{ color: 'black' }}>Software Engineer</Typography>
+          <Typography variant="subtitle2" sx={{ color: 'black', fontFamily: 'Poppins, sans-serif' }}>📍 Metro Manila, Philippines</Typography>
+          <Typography variant="subtitle1" sx={{ color: 'black', fontFamily: 'Poppins, sans-serif' }}>Software Engineer</Typography>
           <Grid spacing={2} container>
             <Grid size={4}>
-              <Button variant="outlined" startIcon={<EventNoteOutlined />} sx={{ fontFamily: 'Poppins, sans-serif', backgroundColor: 'black', color: '#fff', borderColor: 'black', textTransform: 'none', width: '100%', fontSize: 13 }}>
+              <Button variant="outlined" startIcon={<Calendar />} sx={{ fontFamily: 'Poppins, sans-serif', backgroundColor: 'black', color: '#fff', borderColor: 'black', textTransform: 'none', width: '100%', fontSize: 12, fontWeight: 400, fontStyle: 'normal' }}>
                 Schedule a call
               </Button>
             </Grid>
             <Grid size={4}>
-              <Button variant="outlined" startIcon={<EmailOutlined />} sx={{ fontFamily: 'Poppins, sans-serif', color: 'black', borderColor: 'black', textTransform: 'none', width: '100%', fontSize: 13 }}>
+              <Button variant="outlined" startIcon={<Mail />} sx={{ fontFamily: 'Poppins, sans-serif', color: 'black', borderColor: 'black', textTransform: 'none', width: '100%', fontSize: 12, fontWeight: 400, fontStyle: 'normal' }}>
                 Send Email
               </Button>
             </Grid>

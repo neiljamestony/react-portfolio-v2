@@ -1,10 +1,10 @@
-import { Card, CardContent, Typography, Box, Icon } from '@mui/material'
+import { Card, CardContent, Typography, Box, Icon, CardHeader } from '@mui/material'
 import TimelineItem, { timelineItemClasses } from '@mui/lab/TimelineItem';
 import { Timeline, TimelineSeparator, TimelineConnector, TimelineContent, TimelineDot } from '@mui/lab'
-import { BusinessCenterOutlined } from '@mui/icons-material'
+import { BriefcaseBusiness } from 'lucide-react'
 
 export default function Experience() {
-  const testExperience = [
+  const experiences = [
     {
       name: "Software Engineer",
       status: "active",
@@ -37,19 +37,17 @@ export default function Experience() {
     }
   ]
   return (
-    <Card variant="outlined" sx={{ minHeight: 595 }}>
+    <Card variant="outlined" sx={{ minHeight: 633 }}>
+        <CardHeader avatar={
+              <Icon><BriefcaseBusiness /></Icon>
+          }
+          title={
+              <Typography gutterBottom variant="h5" component="div" sx={{ fontFamily: 'Poppins, sans-serif', fontWeight: 'bold', marginTop: 1.5 }}>
+              Experience
+              </Typography>
+          }
+          />
         <CardContent>
-          <Box sx={{ 
-            display: 'flex',
-            justifyContent: 'start',
-            gap: 1,
-            alignItems: 'center' 
-            }}>
-            <Icon><BusinessCenterOutlined sx={{ color: 'black' }}/></Icon>
-            <Typography gutterBottom variant="h5" component="div" sx={{ fontFamily: 'Poppins, sans-serif', fontWeight: 'bold', marginTop: 1.5 }}>
-                Experience
-            </Typography>
-          </Box>
             <Timeline
               sx={{
                 [`& .${timelineItemClasses.root}:before`]: {
@@ -59,14 +57,16 @@ export default function Experience() {
               }}
             >
               {
-                testExperience.map((exp, index) => (
+                experiences.map((exp, index) => (
                   <TimelineItem key={index}>
                     <TimelineSeparator>
-                      <TimelineDot variant={exp.status === "active" ? "filled" : "outlined"} color={exp.status === "active" ? "primary" : "grey"}/>
-                      {index + 1 !== testExperience.length && <TimelineConnector />}
+                      <TimelineDot variant={exp.status === "active" ? "filled" : "outlined"} 
+                        sx={{ backgroundColor: exp.status === "active" ? "black" : "none", borderColor: exp.status === "active" ? "black" : "grey" }}
+                      />
+                      {index + 1 !== experiences.length && <TimelineConnector />}
                     </TimelineSeparator>
                     <TimelineContent >
-                      <Typography variant="overline" sx={{ fontWeight: 'bold', fontFamily: 'Poppins, sans-serif' }}>{exp.name}</Typography>
+                      <Typography variant="subtitle2" sx={{ fontWeight: 'bold', fontFamily: 'Poppins, sans-serif' }}>{exp.name}</Typography>
                       <br/>
                       {
                         exp.company.map((data, index) => (
@@ -76,7 +76,7 @@ export default function Experience() {
                               alignItems: 'center',
                               width: '120%'
                             }}>
-                            <Typography variant="caption" sx={{ fontFamily: 'Poppins, sans-serif', fontSize: 10 }}>{data}</Typography>
+                            <Typography variant="body1" sx={{ fontFamily: 'Poppins, sans-serif', fontSize: 10 }}>{data}</Typography>
                             <Box sx={{ flexGrow: 1, textAlign: 'right' }}>
                               <Typography variant="caption" sx={{ fontFamily: 'Poppins, sans-serif', border: '1px solid #ececec', borderRadius: 2, padding: 0.5, fontSize: 10 }}>
                                 {exp.year}
