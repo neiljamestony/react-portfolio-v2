@@ -1,5 +1,6 @@
 import { Typography, Card, CardContent, Box, Icon, CardHeader } from "@mui/material"
 import { Cpu } from 'lucide-react'
+import { HeaderTitle, SubHeaderTitle, SubHeaderContentContainer, SubHeaderContent } from "./Style";
 
 export default function TechStack() {
   const frontendTech = [
@@ -35,37 +36,37 @@ export default function TechStack() {
             <Icon><Cpu /></Icon>
         }
         title={
-            <Typography gutterBottom variant="h5" component="div" sx={{ fontFamily: 'Poppins, sans-serif', fontWeight: 'bold', marginTop: 1.5 }}>
+            <Typography gutterBottom variant="h6" component="div" sx={HeaderTitle}>
             Tech Stack
             </Typography>
         }
         />
         <CardContent>
           <Box>
-            <Typography variant="body1" sx={{ fontFamily: 'Poppins, sans-serif', fontWeight: 'bold' }}>Frontend</Typography>
-              <Box sx={{ display: 'flex', alignItems: 'self-start', justifyContent: 'start', gap: 1, marginTop: 1, flexWrap: 'wrap' }}>
+            <Typography variant="body1" sx={SubHeaderTitle}>Frontend</Typography>
+              <Box sx={SubHeaderContentContainer}>
                 {frontendTech.map((tech, index) => (
-                    <Typography key={index} variant="caption" sx={{ fontFamily: 'Poppins, sans-serif', border: '1px solid #e1e1e1', borderRadius: 2, padding: 0.5, fontSize: 13, paddingLeft: 1, paddingRight: 1 }}>
+                    <Typography key={index} variant="caption" sx={SubHeaderContent}>
                       {tech}
                     </Typography>
                 ))}
               </Box>
           </Box>
           <Box mt={2}>
-            <Typography variant="body1" sx={{ fontFamily: 'Poppins, sans-serif', fontWeight: 'bold' }}>Backend</Typography>
-              <Box sx={{ display: 'flex', alignItems: 'self-start', justifyContent: 'start', gap: 1, marginTop: 1, flexWrap: 'wrap' }}>
+            <Typography variant="body1" sx={SubHeaderTitle}>Backend</Typography>
+              <Box sx={SubHeaderContentContainer}>
                 {backendTech.map((tech, index) => (
-                    <Typography key={index} variant="caption" sx={{ fontFamily: 'Poppins, sans-serif', border: '1px solid #e1e1e1', borderRadius: 2, padding: 0.5, fontSize: 13, paddingLeft: 1, paddingRight: 1 }}>
+                    <Typography key={index} variant="caption" sx={SubHeaderContent}>
                       {tech}
                     </Typography>
                 ))}
               </Box>
           </Box>
           <Box mt={2}>
-            <Typography variant="body1" sx={{ fontFamily: 'Poppins, sans-serif', fontWeight: 'bold' }}>Devops & Cloud</Typography>
-              <Box sx={{ display: 'flex', alignItems: 'self-start', justifyContent: 'start', gap: 1, marginTop: 1, flexWrap: 'wrap' }}>
+            <Typography variant="body1" sx={SubHeaderTitle}>Devops & Cloud</Typography>
+              <Box sx={SubHeaderContentContainer}>
                 {devOpsTech.map((tech, index) => (
-                    <Typography key={index} variant="caption" sx={{ fontFamily: 'Poppins, sans-serif', border: '1px solid #e1e1e1', borderRadius: 2, padding: 0.5, fontSize: 13, paddingLeft: 1, paddingRight: 1 }}>
+                    <Typography key={index} variant="caption" sx={SubHeaderContent}>
                       {tech}
                     </Typography>
                 ))}

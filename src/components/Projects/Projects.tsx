@@ -1,62 +1,53 @@
-import { Card, CardContent, Typography, Box, Icon, Grid, CardHeader, CardActions } from '@mui/material'
-import { FolderGit2 } from 'lucide-react'
+import { Card, CardContent, Typography, Box, Icon, Stack } from '@mui/material'
+import { FolderGit2, Link } from 'lucide-react'
+import { HeaderContainer, ProjectTitle, ProjectContainer, ProjectLink, ProjectName } from './Style';
 
 export default function Projects() {
   const projects = [
     {
       name: "Quiz App",
-      description: "Quiz application built with React and TypeScript.",
       repoLink: "https://quiz-daily.netlify.app/"
     },
     {
       name: "Authentication Module",
-      description: "Authentication module using Node.js and Express.",
       repoLink: "https://github.com/neiljamestony/authentication-module"
     },
     {
       name: "Chatify",
-      description: "Real-time chat application using the MERN stack",
       repoLink: "https://github.com/neiljamestony/mern-chat"
     },
     {
       name: "Contact App",
-      description: "CRUD built on MERN stack.",
       repoLink: "https://github.com/neiljamestony/contact-app"
     },
   ];
 
+  const openLink = (url: string) => {
+    window.open(url, '_blank');
+  }
+
   return (
-    <Card variant="outlined">
+    <Card variant="outlined" sx={{ minHeight: 363}}>
         <CardContent>
-            <Box sx={{ 
-              display: 'flex',
-              justifyContent: 'start',
-              gap: 1,
-              alignItems: 'center' 
-            }}>
+            <Box sx={HeaderContainer}>
             <Icon><FolderGit2 /></Icon>
-            <Typography gutterBottom variant="h5" component="div" sx={{ fontFamily: 'Poppins, sans-serif', fontWeight: 'bold', marginTop: 1.5 }}>
+            <Typography gutterBottom variant="h6" component="div" sx={ProjectTitle}>
                 Projects
             </Typography>
           </Box>
           <Box>
-            <Grid container spacing={2}>
+            <Stack spacing={2}>
               {
                 projects.map((project, index) => (
-                  <Grid size={6} key={index}>
-                    <Card variant="outlined">
-                      <CardHeader title={<Typography variant="body1" sx={{ fontFamily: 'Poppins, sans-serif', fontWeight: 'bold' }}>{project.name}</Typography>}/>
-                      <CardContent>
-                        <Typography variant="subtitle2">{project.description}</Typography>
-                      </CardContent>
-                      <CardActions>
-                        <a href={project.repoLink} style={{ backgroundColor: "#f6f6f6", borderRadius: 2, padding: 0.5, fontSize: 13, textDecoration: "none", color: 'black' }}>{project.repoLink.replace("https://", "")}</a>
-                      </CardActions>
-                    </Card>
-                  </Grid>
+                  <Box sx={ProjectContainer} onClick={() => openLink(project.repoLink)}>
+                    <Box sx={ProjectLink}><Link size={16}/></Box>
+                    <Typography key={index} variant="caption" sx={ProjectName}>
+                      {project.name}
+                  </Typography>
+                  </Box>
                 ))
               }
-            </Grid>
+            </Stack>
           </Box>
         </CardContent>
     </Card>

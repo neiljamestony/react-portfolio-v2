@@ -35,3 +35,18 @@
 .read-the-docs {
   color: #888;
 }
+
+.mySwiper .swiper-pagination {
+  bottom: 0; /* aligns to the bottom inside padding */
+}
+
+.mySwiper .swiper-pagination-bullet {
+  margin-top: 10px;
+  width: 8px;
+  height: 8px;
+  border: 0.5px solid black;
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+  background: black;
+}

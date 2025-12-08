@@ -6,6 +6,9 @@ import Experience from './components/Experience/Experience'
 import Projects from './components/Projects/Projects'
 import Recommendations from './components/Recommendations/Recommendations'
 import TechStack from './components/TechStack/TechStack'
+import Social from './components/Social/Social';
+import Footer from './components/Footer/Footer'
+
 function App() {
 
   return (
@@ -20,12 +23,22 @@ function App() {
             </Stack>
           </Grid>
           <Grid size={4}>
-            <Experience/>
+            <Stack spacing={1}>
+              <Experience/>
+              <Social/>
+            </Stack>
           </Grid>
         </Grid>
-        <Projects/>
-        <Recommendations/>
+        <Grid container spacing={1}>
+          <Grid size={6}>
+            <Projects/>
+          </Grid>
+          <Grid size={6}>
+            <Recommendations/>
+          </Grid>
+        </Grid>
       </Stack>
+      <Footer/>
     </Container>
   )
 }

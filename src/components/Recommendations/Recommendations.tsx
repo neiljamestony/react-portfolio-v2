@@ -1,21 +1,15 @@
-import { Card, CardContent, Typography, Icon, CardHeader, Box } from '@mui/material'
-import Slider from "react-slick";
+import { Card, CardContent, Typography, Icon, CardHeader, Box, Stack } from '@mui/material'
 import { StickyNote } from 'lucide-react'
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { RecommendationTitle, SwiperContainer, ImageContainer, ImageStyle, ColleagueName, ColleaguePosition, ColleagueFeedback } from './Style';
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 
 export default function Recommendations() {
-
-  const settings = {
-    dots: true,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    speed: 600,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
 
   const recommendations = [
     {
@@ -37,39 +31,44 @@ export default function Recommendations() {
       image: "/image/mike-img.png"
     },
   ];
+
   return (
     <Card variant="outlined">
       <CardHeader avatar={
         <Icon><StickyNote /></Icon>
        }
        title={
-        <Typography gutterBottom variant="h5" component="div" sx={{ fontFamily: 'Poppins, sans-serif', fontWeight: 'bold', marginTop: 1.5 }}>
+        <Typography gutterBottom variant="h6" component="div" sx={RecommendationTitle}>
           Recommendations
         </Typography>
        }
        />
         <CardContent>
-          <Slider {...settings}>
-            {recommendations.map((rec, index) => (
-              <Box key={index}>
-                <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                  <Box component="img"
-                    src={rec.image}
-                    alt="profile-img"
-                    sx={{
-                      width: 90,
-                      height: 90,
-                      borderRadius: 20,
-                      objectFit: 'cover',
-                    }}
-                  />
-                </Box>
-                <Typography variant="body1" sx={{ fontFamily: "Poppins, sans-serif", fontWeight: "bold", textAlign: "center" }}>{rec.name}</Typography>
-                <Typography variant="subtitle2" sx={{ fontFamily: "Poppins, sans-serif", textAlign: "center" }}>{rec.position}</Typography>
-                <Typography variant="caption" sx={{ fontFamily: "Poppins, sans-serif" }}>{rec.testimonial}</Typography>
-              </Box>
-            ))}
-          </Slider>
+           <Swiper
+              slidesPerView={1}
+              loop={true}
+              autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
+              }}
+              pagination={{ clickable: true }}
+              modules={[Autoplay, Pagination]}
+              style={SwiperContainer}
+              className="mySwiper"
+            >
+              {recommendations.map((reco, idx) => (
+                <SwiperSlide key={idx}>
+                  <Stack spacing={1}>
+                    <Box sx={ImageContainer}>
+                      <Box component="img" src={reco.image} alt={`${reco.name}-image`} sx={ImageStyle}/>
+                    </Box>
+                    <Typography variant="body1" sx={ColleagueName}>{reco.name}</Typography>
+                    <Typography variant="body2" sx={ColleaguePosition}>{reco.position}</Typography>
+                    <Typography variant="body2" sx={ColleagueFeedback}>"{reco.testimonial}"</Typography>
+                  </Stack>
+                </SwiperSlide>
+              ))}
+            </Swiper>
         </CardContent>
     </Card>
   )
