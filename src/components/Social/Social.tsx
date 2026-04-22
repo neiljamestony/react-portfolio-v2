@@ -41,7 +41,7 @@ export default function About() {
                 <Stack spacing={1}>
                     {
                         socialLinks.map((social, index) => (
-                            <Box sx={SocialContainer} onClick={() => openLink(social.url)}>
+                            <Box sx={SocialContainer} onClick={() => openLink(social.url)} key={index}>
                                 <Box sx={SocialIcon}>{social.icon}</Box>
                                 <Typography key={index} variant="caption" sx={SocialTitle}>
                                     {social.name}
