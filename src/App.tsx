@@ -11,7 +11,8 @@ import Footer from './components/Footer/Footer'
 
 // DESKTOP
 import DesktopProfile from './components/Profile/DesktopViewPort'
-
+// TABLET
+import TabletProfileViewPort from './components/Profile/TabletViewPort'
 // MOBILE
 import MobileViewPortProfile from './components/Profile/MobileViewPort'
 import MobileViewPortExperience from './components/Experience/MobileViewPort'
@@ -60,7 +61,7 @@ function App() {
     return (
       <Container maxWidth="md">
         <Stack spacing={1}>
-          <MobileViewPortProfile/>
+          <TabletProfileViewPort/>
           <Grid container>
             <Grid size={12}>
               <About/>

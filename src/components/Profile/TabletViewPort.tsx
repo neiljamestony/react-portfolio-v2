@@ -4,7 +4,7 @@ import { CalendarSync, MailPlus, Download } from 'lucide-react'
 import { ProfileImageContainer, ProfileName, Location, SendEmail, ScheduleACall } from './Style'
 import SendEmailComponent from '../SendEmail/SendEmail'
 
-export default function MobileViewPort() {
+export default function TabletViewPort() {
     const [open, setOpen] = useState(false)
     const handleDownloadCV = () => {
         window.open(
@@ -48,18 +48,18 @@ export default function MobileViewPort() {
             </Grid>
             <Grid container spacing={1}>
                 <Grid size={4}>
-                    <Button variant="outlined" onClick={scheduleCallEvent} sx={ScheduleACall}>
-                       <CalendarSync size={16}/>
+                    <Button variant="outlined" startIcon={<CalendarSync size={16}/>} onClick={scheduleCallEvent} sx={ScheduleACall}>
+                       Schedule a call
                     </Button>
                 </Grid>
                 <Grid size={4}>
-                    <Button variant="outlined" sx={SendEmail} onClick={() => setOpen(true)}>
-                        <MailPlus size={16}/>
+                    <Button variant="outlined" startIcon={<MailPlus size={16}/>} sx={SendEmail} onClick={() => setOpen(true)}>
+                        Send Email
                     </Button>
                 </Grid>
                 <Grid size={4}>
-                    <Button onClick={handleDownloadCV} variant="outlined" sx={SendEmail}>
-                       <Download size={16}/>
+                    <Button onClick={handleDownloadCV} startIcon={<Download size={16}/>} variant="outlined" sx={SendEmail}>
+                       Download CV
                     </Button>
                 </Grid>
             </Grid>
