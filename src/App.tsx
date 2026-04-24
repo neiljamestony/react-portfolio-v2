@@ -29,7 +29,7 @@ function App() {
 
   if(isMobile){
     return (
-      <Container maxWidth="md">
+      <Container maxWidth="md" sx={{ margin: 0, padding: 0}}>
         <Stack spacing={1}>
           <MobileViewPortProfile/>
           <Grid container spacing={1}>
