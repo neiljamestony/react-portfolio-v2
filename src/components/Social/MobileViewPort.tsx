@@ -17,7 +17,7 @@ export default function MobileViewPort() {
         },
         {
             name: "Instagram",
-            url: "https://www.instagram.com/nljmstny/",
+            url: "https://www.instagram.com/jameeesverse/",
             icon: <Instagram size={16}/>
         },
     ];

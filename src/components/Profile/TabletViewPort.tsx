@@ -31,8 +31,9 @@ export default function TabletViewPort() {
                     />
                 </Grid>
                 <Grid size={12}>
-                    <Box textAlign="center">
+                    <Box textAlign="center" display="flex" alignContent="center" justifyContent="center" gap={1}>
                         <Typography variant="h6" gutterBottom sx={ProfileName}>Neil James Tony Perdigon</Typography>
+                        <Box component="img" src="/image/metaicon.png" alt="meta-icon" sx={{ height: 20, width: 20, mt: 0.5}}/>
                     </Box>
                 </Grid>
                 <Grid size={12}>

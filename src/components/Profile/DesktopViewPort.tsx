@@ -31,7 +31,7 @@ export default function DesktopViewPort() {
           </Grid>
           <Grid size={9.5}>
             <Stack spacing={1}>
-                <Typography variant="h6" gutterBottom sx={ProfileName}>Neil James Tony Perdigon</Typography>
+                <Typography variant="h6" gutterBottom sx={ProfileName}>Neil James Tony Perdigon <Box component="img" src="/image/metaicon.png" alt="meta-icon" sx={{ height: 20, width: 20, mt: 1 }}/></Typography>
                 <Typography variant="subtitle2" sx={Location}>📍 Metro Manila, Philippines</Typography>
                 <Typography variant="subtitle1" sx={Location}>Software Engineer</Typography>
               <Grid spacing={2} container>

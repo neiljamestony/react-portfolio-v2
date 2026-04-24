@@ -29,6 +29,7 @@ function App() {
   const isDesktopXL = useMediaQuery(theme.breakpoints.down("xl"));
 
   if(isMobile){
+    console.log('sm view port')
     return (
       <Container maxWidth="md" sx={{ margin: 0, padding: 0}}>
         <Stack spacing={1}>

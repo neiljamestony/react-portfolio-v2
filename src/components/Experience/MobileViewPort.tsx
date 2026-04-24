@@ -1,6 +1,6 @@
 import { Box } from '@mui/material'
 import { MobileExperienceTitle, MobileExperienceContainer, MobileExperienceDataContainer, MobileExperienceTimelineBox, MobileExperienceTimelineStick, MobileExperienceTextContainer, MobileExperienceInactiveYear, MobileExperienceActiveYear, MobileExperienceName, MobileExperienceCompany } from './Style'
-
+import { Building2 } from 'lucide-react'
 export default function MobileViewPort() {
     const experiences = [
         {
@@ -56,7 +56,11 @@ export default function MobileViewPort() {
                                     <Box sx={MobileExperienceName}>{exp.name}</Box>
                                     <Box sx={exp.status === "inactive" ? MobileExperienceInactiveYear : MobileExperienceActiveYear}>{exp.year}</Box>
                                 </Box>
-                                <Box sx={MobileExperienceCompany}>{exp.company}</Box>
+                                <Box display="flex" gap={1} mt={1}>
+                                    <Building2 size={16} color="black"/>
+                                    <Box sx={MobileExperienceCompany}>{exp.company}</Box>
+                                </Box>
+                                
                             </Box>
                         ))
                     }
