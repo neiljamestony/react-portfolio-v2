@@ -1,19 +1,11 @@
-import { Stack, Typography, Card, CardContent, Icon, CardHeader } from "@mui/material"
-import { BriefcaseBusiness } from 'lucide-react'
+import { Stack, Typography, Box } from "@mui/material"
+import { AboutTitle } from "./Style"
 
 export default function About() {
   return (
-    <Card variant="outlined">
-        <CardHeader avatar={
-            <Icon><BriefcaseBusiness /></Icon>
-        }
-        title={
-            <Typography gutterBottom variant="h5" component="div" sx={{ fontFamily: 'Poppins, sans-serif', fontWeight: 'bold', marginTop: 1.5 }}>
-            About
-            </Typography>
-        }
-        />
-        <CardContent>
+    <Box mb={5}>
+        <Box sx={AboutTitle}>About</Box>
+        <Box mt={3} ml={1.5}>
             <Stack spacing={1}>
                 <Typography variant="body2" sx={{ color: 'text.secondary', fontFamily: 'Poppins, sans-serif' }}>
                     I am a Web Developer from Metro Manila with 6 years of hands-on experience in building modern, 
@@ -27,7 +19,7 @@ export default function About() {
                     I hold a Bachelor’s degree in Computer Science from St. Clare College of Caloocan, which helped strengthen my foundation in software engineering. With my combination of experience, dedication, and curiosity, I strive to contribute to impactful projects and grow further in the tech industry.
                 </Typography>
             </Stack>
-        </CardContent>
-    </Card>
+        </Box>
+    </Box>
   )
 }

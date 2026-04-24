@@ -1,7 +1,7 @@
 import { Typography, Box, Stack } from "@mui/material"
 import { SubHeaderTitle, SubHeaderContentContainer, SubHeaderContent, MobileViewPortTechStackTitle } from "./Style";
 
-export default function TechStack() {
+export default function MobileViewPort() {
   const frontendTech = [
     "JavaScript",
     "TypeScript",

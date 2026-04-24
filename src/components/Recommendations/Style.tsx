@@ -6,7 +6,7 @@ export const RecommendationTitle = {
 
 export const SwiperContainer = {
     width: '100%', 
-    height: '240px', 
+    height: '200px', 
     borderRadius: '10px'
 }
 
@@ -27,13 +27,15 @@ export const ColleagueName = {
     fontFamily: "Poppins, sans-serif", 
     textAlign: "center", 
     fontSize: 13, 
-    fontWeight: "bold"
+    fontWeight: "bold",
+    color: 'black'
 }
 
 export const ColleaguePosition = {
     fontFamily: "Poppins, sans-serif", 
     textAlign: "center", 
-    fontSize: 11
+    fontSize: 11,
+    color: 'black'
 }
 
 export const ColleagueFeedback = {
@@ -41,5 +43,15 @@ export const ColleagueFeedback = {
     textAlign: "center", 
     padding: 2, 
     fontStyle: 'italic', 
-    fontSize: 10
+    fontSize: 10,
+    color: 'black'
+}
+
+// MOBILE VIEW PORT
+
+export const MobileViewPortRecommendationTitle = {
+    color: 'black',
+    fontFamily: 'Poppins',
+    fontSize: 20,
+    fontWeight: 'bold'
 }

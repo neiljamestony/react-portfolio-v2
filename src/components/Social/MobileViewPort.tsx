@@ -3,7 +3,7 @@ import { Linkedin, Github, Instagram } from 'lucide-react'
 import { MobileSocialName, MobileSocialTitle, SocialIcon, MobileSocialContainer } from "./Style";
 
 
-export default function Social() {
+export default function MobileViewPort() {
     const socialLinks = [
         {
             name: "LinkedIn",

@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 
-export default function Recommendations() {
+export default function MobileViewPort() {
 
   const recommendations = [
     {
@@ -32,9 +32,9 @@ export default function Recommendations() {
   ];
 
   return (
-    <Box>
+    <Box sx={{ height: 250, marginTop: 10 }}>
         <Box sx={MobileViewPortRecommendationTitle}>Recommendations</Box>
-        <Box mt={3}>
+        <Box mt={5}>
             <Swiper
             slidesPerView={1}
             loop={true}

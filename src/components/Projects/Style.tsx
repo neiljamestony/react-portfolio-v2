@@ -28,12 +28,23 @@ export const ProjectContainer = {
 
 export const ProjectLink = {
     marginTop: 0.5,
-    marginLeft: 2
+    marginLeft: 2,
+    color: 'black'
 }
 
 export const ProjectName = {
     fontFamily: 'Poppins, sans-serif', 
     fontSize: 13, 
     paddingLeft: 1, 
-    paddingRight: 1
+    paddingRight: 1,
+    color: 'black'
+}
+
+// MOBILE VIEW PORT
+
+export const MobileProjectTitle = {
+   color: 'black',
+    fontFamily: 'Poppins',
+    fontSize: 20,
+    fontWeight: 'bold' 
 }

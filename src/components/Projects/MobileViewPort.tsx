@@ -2,7 +2,7 @@ import { Box, Stack } from '@mui/material'
 import { Link } from 'lucide-react'
 import { MobileProjectTitle, ProjectContainer, ProjectLink, ProjectName } from './Style';
 
-export default function Projects() {
+export default function MobileViewPort() {
   const projects = [
     {
       name: "Quiz App",
@@ -27,7 +27,7 @@ export default function Projects() {
   }
 
   return (
-    <Box mb={5}>
+    <Box sx={{ height: 200 }}>
         <Box sx={MobileProjectTitle}>Projects</Box>
         <Box mt={3} ml={1.5}>
             <Stack spacing={1}>

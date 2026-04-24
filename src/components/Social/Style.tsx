@@ -30,3 +30,27 @@ export const SocialIcon = {
     marginTop: 0.5,
     marginLeft: 2
 }
+
+// MOBILE VIEW PORT
+
+export const MobileSocialTitle = {
+    color: 'black',
+    fontFamily: 'Poppins',
+    fontSize: 20,
+    fontWeight: 'bold'
+}
+
+export const MobileSocialContainer = {
+    display: 'flex', 
+    justifyContent: 'flex-start', 
+    alignItems: 'center', 
+    gap: 1, 
+    border: '1px solid #e1e1e1', 
+    borderRadius: 2
+}
+
+export const MobileSocialName = {
+    color: 'black',
+    fontFamily: 'Poppins',
+    fontSize: 13
+}
