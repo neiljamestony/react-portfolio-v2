@@ -6,7 +6,7 @@ export const RecommendationTitle = {
 
 export const SwiperContainer = {
     width: '100%', 
-    height: '200px', 
+    height: '250px', 
     borderRadius: '10px'
 }
 
