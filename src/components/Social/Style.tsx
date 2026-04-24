@@ -53,11 +53,21 @@ export const MobileSocialContainer = {
     alignItems: 'center', 
     gap: 1, 
     border: '1px solid #e1e1e1', 
-    borderRadius: 2
+    borderRadius: 2,
+     "&:hover": {
+        color: "#fff",
+        backgroundColor: "black",
+        border: 'none'
+    },
+    color: 'black'
 }
 
 export const MobileSocialName = {
-    color: 'black',
     fontFamily: 'Poppins',
     fontSize: 13
+}
+
+export const MobileSocialIcon = {
+    marginTop: 0.5,
+    marginLeft: 2
 }

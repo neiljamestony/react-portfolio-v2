@@ -51,7 +51,6 @@ export const MobileProjectTitle = {
 export const MobileProjectLink = {
     marginTop: 0.5,
     marginLeft: 2,
-    color: 'black'
 }
 
 export const MobileProjectName = {
@@ -59,7 +58,6 @@ export const MobileProjectName = {
     fontSize: 13, 
     paddingLeft: 1, 
     paddingRight: 1,
-    color: 'black'
 }
 
 export const MobileProjectContainer = {
@@ -71,8 +69,9 @@ export const MobileProjectContainer = {
     alignItems: "center", 
     cursor: "pointer",
      "&:hover": {
-        color: "white",
+        color: "#fff",
         backgroundColor: "black",
         border: 'none'
-    }
+    },
+    color: 'black'
 }

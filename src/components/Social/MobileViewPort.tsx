@@ -1,6 +1,6 @@
 import { Stack, Box } from "@mui/material"
 import { Linkedin, Github, Instagram } from 'lucide-react'
-import { MobileSocialName, MobileSocialTitle, SocialIcon, MobileSocialContainer } from "./Style";
+import { MobileSocialName, MobileSocialTitle, MobileSocialIcon, MobileSocialContainer } from "./Style";
 
 
 export default function MobileViewPort() {
@@ -34,7 +34,7 @@ export default function MobileViewPort() {
                     {
                         socialLinks.map((social, index) => (
                             <Box sx={MobileSocialContainer} onClick={() => openLink(social.url)} key={index}>
-                                <Box sx={SocialIcon} color="black">{social.icon}</Box>
+                                <Box sx={MobileSocialIcon}>{social.icon}</Box>
                                 <Box sx={MobileSocialName}>{social.name}</Box>
                             </Box>
                         ))
