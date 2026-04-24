@@ -1,6 +1,6 @@
 import { Box, Stack } from '@mui/material'
 import { Link } from 'lucide-react'
-import { MobileProjectTitle, ProjectContainer, ProjectLink, ProjectName } from './Style';
+import { MobileProjectTitle, MobileProjectContainer, MobileProjectName, MobileProjectLink } from './Style';
 
 export default function MobileViewPort() {
   const projects = [
@@ -33,9 +33,9 @@ export default function MobileViewPort() {
             <Stack spacing={1}>
             {
                 projects.map((project, index) => (
-                  <Box sx={ProjectContainer} key={index} onClick={() => openLink(project.repoLink)}>
-                      <Box sx={ProjectLink}><Link size={16}/></Box>
-                      <Box sx={ProjectName}>{project.name}</Box>
+                  <Box sx={MobileProjectContainer} key={index} onClick={() => openLink(project.repoLink)}>
+                      <Box sx={MobileProjectLink}><Link size={16}/></Box>
+                      <Box sx={MobileProjectName}>{project.name}</Box>
                   </Box>
                 ))
             }

@@ -1,5 +1,5 @@
 import { Typography, Box, Stack } from '@mui/material'
-import { SwiperContainer, ImageContainer, ImageStyle, ColleagueName, ColleaguePosition, ColleagueFeedback, MobileViewPortRecommendationTitle } from './Style';
+import { SwiperContainerMobile, ImageContainer, ImageStyle, ColleagueName, ColleaguePosition, ColleagueFeedback, MobileViewPortRecommendationTitle } from './Style';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
@@ -43,9 +43,8 @@ export default function MobileViewPort() {
                 disableOnInteraction: false,
             }}
             modules={[Autoplay]}
-            style={SwiperContainer}
+            style={SwiperContainerMobile}
             className="mySwiper"
-            navigation
             >
             {recommendations.map((reco, idx) => (
                 <SwiperSlide key={idx}>

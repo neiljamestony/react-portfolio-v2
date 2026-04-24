@@ -1,6 +1,6 @@
 import { Stack, Box } from "@mui/material"
 import { Linkedin, Github, Instagram } from 'lucide-react'
-import { MobileSocialName, MobileSocialTitle, SocialIcon, MobileSocialContainer } from "./Style";
+import { SocialTitle, SocialIcon, SocialContainer, SocialName } from "./Style";
 
 
 export default function Social() {
@@ -28,14 +28,14 @@ export default function Social() {
     
     return (
         <Box sx={{ height: 200 }}>
-            <Box sx={MobileSocialTitle}>Social Links</Box>
+            <Box sx={SocialTitle}>Social Links</Box>
             <Box mt={3} ml={1.5}>
                 <Stack spacing={1}>
                     {
                         socialLinks.map((social, index) => (
-                            <Box sx={MobileSocialContainer} onClick={() => openLink(social.url)} key={index}>
-                                <Box sx={SocialIcon} color="black">{social.icon}</Box>
-                                <Box sx={MobileSocialName}>{social.name}</Box>
+                            <Box sx={SocialContainer} onClick={() => openLink(social.url)} key={index}>
+                                <Box sx={SocialIcon}>{social.icon}</Box>
+                                <Box sx={SocialName}>{social.name}</Box>
                             </Box>
                         ))
                     }

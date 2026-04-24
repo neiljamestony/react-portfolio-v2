@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Grid, Box, Stack, Typography, Button } from '@mui/material'
 import { ProfileName, ProfileImageContainer, Location, ScheduleACall, SendEmail } from './Style'
-import { Calendar, Mail, FileDown } from 'lucide-react'
+import { CalendarSync, MailPlus, Download } from 'lucide-react'
 import SendEmailComponent from '../SendEmail/SendEmail'
 
 export default function DesktopViewPort() {
@@ -36,17 +36,17 @@ export default function DesktopViewPort() {
                 <Typography variant="subtitle1" sx={Location}>Software Engineer</Typography>
               <Grid spacing={2} container>
                 <Grid size={4}>
-                  <Button variant="outlined" startIcon={<Calendar size={16}/>} onClick={scheduleCallEvent} sx={ScheduleACall}>
+                  <Button variant="outlined" startIcon={<CalendarSync size={16}/>} onClick={scheduleCallEvent} sx={ScheduleACall}>
                     Schedule a call
                   </Button>
                 </Grid>
                 <Grid size={4}>
-                  <Button variant="outlined" startIcon={<Mail size={16}/>} sx={SendEmail} onClick={() => setOpen(true)}>
+                  <Button variant="outlined" startIcon={<MailPlus size={16}/>} sx={SendEmail} onClick={() => setOpen(true)}>
                     Send Email
                   </Button>
                 </Grid>
                 <Grid size={4}>
-                  <Button onClick={handleDownloadCV} variant="outlined" startIcon={<FileDown size={16}/>} sx={SendEmail}>
+                  <Button onClick={handleDownloadCV} variant="outlined" startIcon={<Download size={16}/>} sx={SendEmail}>
                     Download CV
                   </Button>
                 </Grid>

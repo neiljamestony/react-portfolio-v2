@@ -45,7 +45,6 @@ export default function Recommendations() {
             modules={[Autoplay]}
             style={SwiperContainer}
             className="mySwiper"
-            navigation
             >
             {recommendations.map((reco, idx) => (
                 <SwiperSlide key={idx}>

@@ -6,8 +6,10 @@ export const RecommendationTitle = {
 
 export const SwiperContainer = {
     width: '100%', 
-    height: '270px', 
-    borderRadius: '10px'
+    height: '200px', 
+    borderRadius: '10px',
+    backgroundColor: 'white',
+    padding: 5
 }
 
 export const ImageContainer = {
@@ -44,7 +46,8 @@ export const ColleagueFeedback = {
     padding: 2, 
     fontStyle: 'italic', 
     fontSize: 10,
-    color: 'black'
+    color: 'black',
+    paddingBottom: 10
 }
 
 // MOBILE VIEW PORT
@@ -54,4 +57,12 @@ export const MobileViewPortRecommendationTitle = {
     fontFamily: 'Poppins',
     fontSize: 20,
     fontWeight: 'bold'
+}
+
+export const SwiperContainerMobile = {
+    width: '100%', 
+    height: '300px', 
+    borderRadius: '10px',
+    backgroundColor: 'white',
+    padding: 5
 }

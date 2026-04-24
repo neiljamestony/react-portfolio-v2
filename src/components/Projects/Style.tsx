@@ -19,25 +19,24 @@ export const ProjectContainer = {
     justifyContent: "flex-start", 
     alignItems: "center", 
     cursor: "pointer",
-    "&:hover": {
+     "&:hover": {
         color: "#fff",
         backgroundColor: "black",
         border: 'none'
-    }
+    },
+    color: 'black'
 }
 
 export const ProjectLink = {
     marginTop: 0.5,
-    marginLeft: 2,
-    color: 'black'
+    marginLeft: 2
 }
 
 export const ProjectName = {
     fontFamily: 'Poppins, sans-serif', 
     fontSize: 13, 
     paddingLeft: 1, 
-    paddingRight: 1,
-    color: 'black'
+    paddingRight: 1
 }
 
 // MOBILE VIEW PORT
@@ -47,4 +46,33 @@ export const MobileProjectTitle = {
     fontFamily: 'Poppins',
     fontSize: 20,
     fontWeight: 'bold' 
+}
+
+export const MobileProjectLink = {
+    marginTop: 0.5,
+    marginLeft: 2,
+    color: 'black'
+}
+
+export const MobileProjectName = {
+    fontFamily: 'Poppins, sans-serif', 
+    fontSize: 13, 
+    paddingLeft: 1, 
+    paddingRight: 1,
+    color: 'black'
+}
+
+export const MobileProjectContainer = {
+    border: '1px solid #e1e1e1', 
+    borderRadius: 2, 
+    padding: 0.5, 
+    display: "flex", 
+    justifyContent: "flex-start", 
+    alignItems: "center", 
+    cursor: "pointer",
+     "&:hover": {
+        color: "white",
+        backgroundColor: "black",
+        border: 'none'
+    }
 }

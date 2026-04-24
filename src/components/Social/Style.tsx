@@ -16,19 +16,26 @@ export const SocialContainer = {
         color: "#fff",
         backgroundColor: "black",
         border: 'none'
-    }
+    },
+    color: 'black',
+    gap: 1
 }
 
 export const SocialTitle = {
-    fontFamily: 'Poppins, sans-serif',  
-    fontSize: 13, 
-    paddingLeft: 1, 
-    paddingRight: 1
+    color: 'black',
+    fontFamily: 'Poppins',
+    fontSize: 20,
+    fontWeight: 'bold'
 }
 
 export const SocialIcon = {
     marginTop: 0.5,
     marginLeft: 2
+}
+
+export const SocialName = {
+    fontFamily: 'Poppins',
+    fontSize: 13
 }
 
 // MOBILE VIEW PORT
