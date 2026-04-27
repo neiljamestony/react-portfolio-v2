@@ -1,8 +1,10 @@
 import { Box, Stack } from '@mui/material'
 import { Link } from 'lucide-react'
 import { MobileProjectTitle, MobileProjectContainer, MobileProjectName, MobileProjectLink } from './Style';
+import { useAppSelector } from '../../redux/hook/hook';
 
 export default function MobileViewPort() {
+  const { theme } = useAppSelector((state) => state.themeState)
   const projects = [
     {
       name: "Quiz App",
@@ -28,13 +30,29 @@ export default function MobileViewPort() {
 
   return (
     <Box sx={{ height: 200 }}>
-        <Box sx={MobileProjectTitle}>Projects</Box>
+        <Box sx={{...MobileProjectTitle, color: theme === "dark" ? "#fff" : "black"}}>Projects</Box>
         <Box mt={3} ml={1.5}>
             <Stack spacing={1}>
             {
                 projects.map((project, index) => (
-                  <Box sx={MobileProjectContainer} key={index} onClick={() => openLink(project.repoLink)}>
-                      <Box sx={MobileProjectLink}><Link size={16}/></Box>
+                  <Box sx={{...MobileProjectContainer, border: 1,
+                        borderColor: theme === "dark" ? "#e1e1e1" : "text.secondary",
+                        backgroundColor: theme === "dark" ? "#fff" : "none",
+                        borderRadius: 2, 
+                        "&:hover": {
+                            color: "#fff",
+                            backgroundColor: theme === "dark" ? "#fff" : "black",
+                            border: 'none'
+                        },
+                        color: theme === "dark" ? "black" : "text.secondary"
+                      }} key={index} onClick={() => openLink(project.repoLink)}>
+                      <Box sx={{...MobileProjectLink,
+                        "&:hover": {
+                            color: "#fff",
+                            backgroundColor: theme === "dark" ? "#fff" : "black",
+                            border: 'none'
+                        }
+                      }}><Link size={16}/></Box>
                       <Box sx={MobileProjectName}>{project.name}</Box>
                   </Box>
                 ))

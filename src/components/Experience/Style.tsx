@@ -53,7 +53,6 @@ export const ExperienceTimelineStick = {
 // MOBILE VIEW PORT
 
 export const MobileExperienceTitle = {
-    color: 'black',
     fontFamily: 'Poppins',
     fontSize: 20,
     fontWeight: 'bold'
@@ -96,19 +95,16 @@ export const MobileExperienceTextContainer = {
 }
 
 export const MobileExperienceName = {
-    color: 'black',
     fontFamily: 'Poppins',
     fontSize: 15
 }
 
 export const MobileExperienceCompany = {
-    color: 'black',
     fontFamily: 'Poppins',
     fontSize: 13
 }
 
 export const MobileExperienceInactiveYear = {
-    color: 'black',
     fontFamily: 'Poppins',
     fontSize: 11
 }

@@ -12,19 +12,11 @@ export const ProjectTitle = {
 }
 
 export const ProjectContainer = {
-    border: '1px solid #e1e1e1', 
-    borderRadius: 2, 
     padding: 0.5, 
     display: "flex", 
     justifyContent: "flex-start", 
     alignItems: "center", 
     cursor: "pointer",
-     "&:hover": {
-        color: "#fff",
-        backgroundColor: "black",
-        border: 'none'
-    },
-    color: 'black'
 }
 
 export const ProjectLink = {
@@ -42,7 +34,6 @@ export const ProjectName = {
 // MOBILE VIEW PORT
 
 export const MobileProjectTitle = {
-   color: 'black',
     fontFamily: 'Poppins',
     fontSize: 20,
     fontWeight: 'bold' 
@@ -61,17 +52,10 @@ export const MobileProjectName = {
 }
 
 export const MobileProjectContainer = {
-    border: '1px solid #e1e1e1', 
     borderRadius: 2, 
     padding: 0.5, 
     display: "flex", 
     justifyContent: "flex-start", 
     alignItems: "center", 
-    cursor: "pointer",
-     "&:hover": {
-        color: "#fff",
-        backgroundColor: "black",
-        border: 'none'
-    },
-    color: 'black'
+    cursor: "pointer"
 }

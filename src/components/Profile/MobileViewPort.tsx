@@ -1,11 +1,17 @@
 import { useState } from 'react'
-import { Grid, Box, Typography, Button } from '@mui/material'
+import { Grid, Box, Typography, Button, FormControlLabel } from '@mui/material'
 import { CalendarSync, MailPlus, Download } from 'lucide-react'
 import { ProfileImageContainer, ProfileName, Location, SendEmail, ScheduleACall } from './Style'
+import { setTheme } from '../../redux/reducer/ThemeReducer'
+import { useAppSelector, useAppDispatch } from '../../redux/hook/hook'
 import SendEmailComponent from '../SendEmail/SendEmail'
+import { MaterialUISwitch } from './DesktopViewPort'
 
 export default function MobileViewPort() {
+    const { theme } = useAppSelector((state) => state.themeState)
+    const dispatch = useAppDispatch();
     const [open, setOpen] = useState(false)
+
     const handleDownloadCV = () => {
         window.open(
         "https://drive.google.com/uc?export=download&id=1rtApoh0XeyYioJHxUaMxRknp4Se6gsd3",
@@ -29,37 +35,58 @@ export default function MobileViewPort() {
                     alt="profile-img"
                     sx={ProfileImageContainer}
                     />
+                   
                 </Grid>
                 <Grid size={12}>
-                    <Box textAlign="center" display="flex" alignContent="center" justifyContent="center" gap={1}>
-                        <Typography variant="h6" gutterBottom sx={ProfileName}>Neil James Tony Perdigon</Typography>
-                        <Box component="img" src="/image/metaicon.png" alt="meta-icon" sx={{ height: 20, width: 20, mt: 0.5}}/>
+                    <Box display="flex" justifyContent="space-between" alignItems="center">
+                        <Box display="flex">
+                            <Typography gutterBottom sx={{...ProfileName, color: theme === "dark" ? "#fff" : "black", fontSize: 20 }}>Neil James</Typography>
+                            <Box component="img" src="/image/metaicon.png" alt="meta-icon" sx={{ height: 20, width: 20, mt: 0.5}}/>
+                        </Box>
+                        <FormControlLabel
+                            value="bottom"
+                            control={<MaterialUISwitch size="small"/>}
+                            label=""
+                            onChange={() => dispatch(setTheme(theme === "light" ? "dark" : "light"))}
+                            labelPlacement="bottom"
+                        />
+                    </Box>
+                    
+                </Grid>
+                <Grid size={12}>
+                    <Box textAlign="center">
+                        <Typography variant="subtitle1" sx={{...Location, color: theme === "dark" ? "#fff" : "black" }}>Software Engineer</Typography>
                     </Box>
                 </Grid>
                 <Grid size={12}>
                     <Box textAlign="center">
-                        <Typography variant="subtitle2" sx={Location}>📍 Metro Manila, Philippines</Typography>
-                    </Box>
-                </Grid>
-                <Grid size={12}>
-                    <Box textAlign="center">
-                        <Typography variant="subtitle1" sx={Location}>Software Engineer</Typography>
+                        <Typography variant="subtitle2" sx={{...Location, color: theme === "dark" ? "#fff" : "black" }}>📍 Metro Manila, Philippines</Typography>
+                        
                     </Box>
                 </Grid>
             </Grid>
             <Grid container spacing={1}>
                 <Grid size={4}>
-                    <Button variant="outlined" onClick={scheduleCallEvent} sx={ScheduleACall}>
+                    <Button variant="outlined" onClick={scheduleCallEvent} sx={{...ScheduleACall,
+                  backgroundColor: theme === "dark" ? "#fff" : "black",
+                  color: theme === "dark" ? "black" : "#fff"
+                }}>
                        <CalendarSync size={16}/>
                     </Button>
                 </Grid>
                 <Grid size={4}>
-                    <Button variant="outlined" sx={SendEmail} onClick={() => setOpen(true)}>
+                    <Button variant="outlined" sx={{...SendEmail,
+                  color: theme === "dark" ? "#fff" : "black",
+                  borderColor: theme === "dark" ? "#fff" : "black"
+                }} onClick={() => setOpen(true)}>
                         <MailPlus size={16}/>
                     </Button>
                 </Grid>
                 <Grid size={4}>
-                    <Button onClick={handleDownloadCV} variant="outlined" sx={SendEmail}>
+                    <Button onClick={handleDownloadCV} variant="outlined" sx={{...SendEmail,
+                  color: theme === "dark" ? "#fff" : "black",
+                  borderColor: theme === "dark" ? "#fff" : "black"
+                }}>
                        <Download size={16}/>
                     </Button>
                 </Grid>

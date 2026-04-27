@@ -6,20 +6,16 @@ export const ProfileImageContainer = {
 }
 
 export const ProfileName = {
-    fontFamily: 'Poppins, sans-serif', 
-    color: 'black', 
+    fontFamily: 'Poppins, sans-serif',
     fontWeight: 'bold'
 }
 
 export const Location = {
-    color: 'black', 
     fontFamily: 'Poppins, sans-serif'
 }
 
 export const ScheduleACall = {
-    fontFamily: 'Poppins, sans-serif', 
-    backgroundColor: 'black', 
-    color: '#fff', 
+    fontFamily: 'Poppins, sans-serif',
     borderColor: 'black', 
     textTransform: 'none', 
     width: '100%', 
@@ -29,9 +25,7 @@ export const ScheduleACall = {
 }
 
 export const SendEmail = {
-    fontFamily: 'Poppins, sans-serif', 
-    color: 'black', 
-    borderColor: 'black', 
+    fontFamily: 'Poppins, sans-serif',
     textTransform: 'none', 
     width: '100%', 
     fontSize: 12, 

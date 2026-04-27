@@ -6,8 +6,7 @@ export const HeaderTitle = {
 
 export const SubHeaderTitle = {
     fontFamily: 'Poppins, sans-serif', 
-    fontWeight: 'bold',
-    color: 'black'
+    fontWeight: 'bold'
 }
 
 export const SubHeaderContentContainer = {
@@ -22,24 +21,15 @@ export const SubHeaderContentContainer = {
 
 export const SubHeaderContent = {
     fontFamily: 'Poppins, sans-serif', 
-    border: '1px solid #e1e1e1', 
-    borderRadius: 2, 
     padding: 0.5, 
     fontSize: 13, 
     paddingLeft: 1, 
     paddingRight: 1,
     cursor: 'pointer',
-    "&:hover": {
-        color: '#fff',
-        backgroundColor: 'black',
-        border: 'none'
-    },
-    color: 'black'
 }
 
 // MOBILE VIEW PORT
 export const MobileViewPortTechStackTitle = {
-    color: 'black',
     fontFamily: 'Poppins',
     fontSize: 20,
     fontWeight: 'bold'

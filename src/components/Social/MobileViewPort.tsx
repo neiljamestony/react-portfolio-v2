@@ -1,9 +1,10 @@
 import { Stack, Box } from "@mui/material"
 import { Linkedin, Github, Instagram } from 'lucide-react'
 import { MobileSocialName, MobileSocialTitle, MobileSocialIcon, MobileSocialContainer } from "./Style";
-
+import { useAppSelector } from "../../redux/hook/hook";
 
 export default function MobileViewPort() {
+    const { theme } = useAppSelector((state) => state.themeState)
     const socialLinks = [
         {
             name: "LinkedIn",
@@ -28,13 +29,30 @@ export default function MobileViewPort() {
     
     return (
         <Box sx={{ height: 200 }}>
-            <Box sx={MobileSocialTitle}>Social Links</Box>
+            <Box sx={{...MobileSocialTitle, color: theme === "dark" ? "#fff" : "black"}}>Social Links</Box>
             <Box mt={3} ml={1.5}>
                 <Stack spacing={1}>
                     {
                         socialLinks.map((social, index) => (
-                            <Box sx={MobileSocialContainer} onClick={() => openLink(social.url)} key={index}>
-                                <Box sx={MobileSocialIcon}>{social.icon}</Box>
+                            <Box sx={{...MobileSocialContainer,
+                                    border: 1,
+                                    borderColor: theme === "dark" ? "#e1e1e1" : "text.secondary",
+                                    backgroundColor: theme === "dark" ? "#fff" : "none",
+                                    borderRadius: 2, 
+                                    "&:hover": {
+                                        color: "#fff",
+                                        backgroundColor: theme === "dark" ? "#fff" : "black",
+                                        border: 'none'
+                                    },
+                                    color: theme === "dark" ? "black" : "text.secondary"
+                            }} onClick={() => openLink(social.url)} key={index}>
+                                <Box sx={{...MobileSocialIcon,
+                                    "&:hover": {
+                                        color: "#fff",
+                                        backgroundColor: theme === "dark" ? "#fff" : "black",
+                                        border: 'none'
+                                    }
+                                }}>{social.icon}</Box>
                                 <Box sx={MobileSocialName}>{social.name}</Box>
                             </Box>
                         ))

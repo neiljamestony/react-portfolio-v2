@@ -1,7 +1,8 @@
 import { Typography, Box, Stack } from '@mui/material'
-import { SwiperContainerMobile, ImageContainer, ImageStyle, ColleagueName, ColleaguePosition, ColleagueFeedback, MobileViewPortRecommendationTitle } from './Style';
+import { SwiperContainerMobile, ImageContainer, MobileImageStyle, ColleagueName, ColleaguePosition, ColleagueFeedback, MobileViewPortRecommendationTitle } from './Style';
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import { useAppSelector } from '../../redux/hook/hook';
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -9,7 +10,7 @@ import "swiper/css/navigation";
 
 
 export default function MobileViewPort() {
-
+  const { theme } = useAppSelector((state) => state.themeState)
   const recommendations = [
     {
       name: "Leonardo Victorio",
@@ -33,7 +34,7 @@ export default function MobileViewPort() {
 
   return (
     <Box sx={{ height: 250, marginTop: 10 }}>
-        <Box sx={MobileViewPortRecommendationTitle}>Recommendations</Box>
+        <Box sx={{...MobileViewPortRecommendationTitle, color: theme === "dark" ? "#fff" : "black"}}>Recommendations</Box>
         <Box mt={5}>
             <Swiper
             slidesPerView={1}
@@ -43,18 +44,18 @@ export default function MobileViewPort() {
                 disableOnInteraction: false,
             }}
             modules={[Autoplay]}
-            style={SwiperContainerMobile}
+            style={{...SwiperContainerMobile, backgroundColor: theme === "dark" ? "black" : "#fff" }}
             className="mySwiper"
             >
             {recommendations.map((reco, idx) => (
                 <SwiperSlide key={idx}>
                     <Stack spacing={1}>
                         <Box sx={ImageContainer}>
-                            <Box component="img" src={reco.image} alt={`${reco.name}-image`} sx={ImageStyle}/>
+                            <Box component="img" src={reco.image} alt={`${reco.name}-image`} sx={MobileImageStyle}/>
                         </Box>
-                        <Typography variant="body1" sx={ColleagueName}>{reco.name}</Typography>
-                        <Typography variant="body2" sx={ColleaguePosition}>{reco.position}</Typography>
-                        <Typography variant="body2" sx={ColleagueFeedback}>"{reco.testimonial}"</Typography>
+                        <Typography variant="body1" sx={{...ColleagueName, color: theme === "dark" ? "#fff" : "black" }}>{reco.name}</Typography>
+                        <Typography variant="body2" sx={{...ColleaguePosition, color: theme === "dark" ? "#fff" : "black" }}>{reco.position}</Typography>
+                        <Typography variant="body2" sx={{...ColleagueFeedback, color: theme === "dark" ? "#fff" : "black" }}>"{reco.testimonial}"</Typography>
                     </Stack>
                 </SwiperSlide>
             ))}

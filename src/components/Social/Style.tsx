@@ -17,12 +17,10 @@ export const SocialContainer = {
         backgroundColor: "black",
         border: 'none'
     },
-    color: 'black',
     gap: 1
 }
 
 export const SocialTitle = {
-    color: 'black',
     fontFamily: 'Poppins',
     fontSize: 20,
     fontWeight: 'bold'
@@ -41,7 +39,6 @@ export const SocialName = {
 // MOBILE VIEW PORT
 
 export const MobileSocialTitle = {
-    color: 'black',
     fontFamily: 'Poppins',
     fontSize: 20,
     fontWeight: 'bold'
@@ -51,15 +48,7 @@ export const MobileSocialContainer = {
     display: 'flex', 
     justifyContent: 'flex-start', 
     alignItems: 'center', 
-    gap: 1, 
-    border: '1px solid #e1e1e1', 
-    borderRadius: 2,
-     "&:hover": {
-        color: "#fff",
-        backgroundColor: "black",
-        border: 'none'
-    },
-    color: 'black'
+    gap: 1
 }
 
 export const MobileSocialName = {

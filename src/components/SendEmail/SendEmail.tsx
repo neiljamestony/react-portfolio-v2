@@ -79,8 +79,8 @@ export default function SendEmail({ open, handleClose }: { open: boolean, handle
                         </Stack>
                     </DialogContent>
                     <DialogActions>
-                        <Button type="button" variant="outlined" disabled={loading} onClick={handleClose} sx={SendEmailStyle}>Cancel</Button>
-                        <Button type="submit" variant='outlined' sx={ScheduleACall} onClick={handleSendEmail} disabled={loading}>{loading ? <CircularProgress size={20} sx={{ color: '#fff' }}/> : 'Submit'}</Button>
+                        <Button type="button" variant="outlined" disabled={loading} onClick={handleClose} sx={{ ...SendEmailStyle, backgroundColor: 'black', color: '#fff' }}>Cancel</Button>
+                        <Button type="submit" variant='outlined' sx={{...ScheduleACall, borderColor: 'black', color: 'black'}} onClick={handleSendEmail} disabled={loading}>{loading ? <CircularProgress size={20} sx={{ color: '#fff' }}/> : 'Submit'}</Button>
                     </DialogActions>
             </Dialog>
             <DisplayMessage open={displayMessage} error={hasError} handleClose={() => setOpenDisplayMessage(false)}/>

@@ -8,7 +8,6 @@ export const SwiperContainer = {
     width: '100%', 
     height: '200px', 
     borderRadius: '10px',
-    backgroundColor: 'white',
     padding: 5
 }
 
@@ -19,8 +18,8 @@ export const ImageContainer = {
 }
 
 export const ImageStyle = {
-    height: 60,
-    width: 60,
+    height: 80,
+    width: 80,
     borderRadius: '50%',
     objectFit: 'cover',
 }
@@ -30,14 +29,12 @@ export const ColleagueName = {
     textAlign: "center", 
     fontSize: 13, 
     fontWeight: "bold",
-    color: 'black'
 }
 
 export const ColleaguePosition = {
     fontFamily: "Poppins, sans-serif", 
     textAlign: "center", 
-    fontSize: 11,
-    color: 'black'
+    fontSize: 11
 }
 
 export const ColleagueFeedback = {
@@ -46,14 +43,12 @@ export const ColleagueFeedback = {
     padding: 2, 
     fontStyle: 'italic', 
     fontSize: 10,
-    color: 'black',
     paddingBottom: 10
 }
 
 // MOBILE VIEW PORT
 
 export const MobileViewPortRecommendationTitle = {
-    color: 'black',
     fontFamily: 'Poppins',
     fontSize: 20,
     fontWeight: 'bold'
@@ -63,6 +58,12 @@ export const SwiperContainerMobile = {
     width: '100%', 
     height: '300px', 
     borderRadius: '10px',
-    backgroundColor: 'white',
     padding: 5
+}
+
+export const MobileImageStyle = {
+    height: 110,
+    width: 110,
+    borderRadius: '50%',
+    objectFit: 'cover',
 }
