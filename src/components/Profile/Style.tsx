@@ -27,7 +27,7 @@ export const ScheduleACall = {
     borderColor: 'black', 
     textTransform: 'none', 
     width: '100%', 
-    fontSize: 10, 
+    fontSize: 13, 
     fontWeight: 400, 
     fontStyle: 'normal'
 }

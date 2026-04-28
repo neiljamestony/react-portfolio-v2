@@ -68,29 +68,26 @@ export default function MobileViewPort() {
                         }}
                     >
                         <Box sx={{ overflow: 'hidden' }}>
-                        <Typography
-                            sx={{
-                            ...ProfileName,
-                            color: theme === "dark" ? "#fff" : "black",
-                            fontSize: 13,
-                            lineHeight: 1,
-                            display: 'flex',
-                            alignItems: 'center',
-                            gap: 0.5,
-                            }}
-                        >
-                            Neil Perdigon
-
-                            <Box
-                            component="img"
-                            src="/image/metaicon.png"
-                            alt="meta-icon"
-                            sx={{
-                                height: 16,
-                                width: 16,
-                            }}
-                            />
-                        </Typography>
+                            <Typography
+                                sx={{
+                                ...ProfileName,
+                                color: theme === "dark" ? "#fff" : "black",
+                                fontSize: 13,
+                                lineHeight: 1,
+                                display: 'flex',
+                                alignItems: 'center',
+                                gap: 0.5,
+                                }}> Neil Perdigon
+                                <Box
+                                component="img"
+                                src="/image/metaicon.png"
+                                alt="meta-icon"
+                                sx={{
+                                    height: 16,
+                                    width: 16,
+                                }}
+                                />
+                            </Typography>
                         </Box>
 
                         <FormControlLabel
@@ -102,7 +99,7 @@ export default function MobileViewPort() {
                                 dispatch(setTheme(theme === "light" ? "dark" : "light"))
                             }
                             labelPlacement="bottom"
-                            />
+                        />
                     </Box>
 
                     <Typography
@@ -148,6 +145,7 @@ export default function MobileViewPort() {
                             ...ScheduleACall,
                             backgroundColor: theme === "dark" ? "#fff" : "black",
                             color: theme === "dark" ? "black" : "#fff",
+                            fontSize: 10
                             }}
                         >
                             <CalendarSync size={16} />

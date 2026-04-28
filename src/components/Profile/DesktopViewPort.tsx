@@ -168,12 +168,11 @@ export default function DesktopViewPort() {
                 labelPlacement="bottom"
               />
             </Box>
-            
+            <Typography variant="subtitle2" sx={{...Location, color: theme === "dark" ? "#fff" : "black" }}>📍 Metro Manila, Philippines</Typography>
             <Box display="flex" alignItems="center" justifyContent="initial" gap={0.5} mb={1}>
               <CircleUser size={16} color={theme === "dark" ? "#fff" : "black" }/>
               <Typography variant="subtitle2" sx={{...Location, color: theme === "dark" ? "#fff" : "black" }}>Software Engineer</Typography>
             </Box>
-            <Typography variant="subtitle2" sx={{...Location, color: theme === "dark" ? "#fff" : "black" }}>📍 Metro Manila, Philippines</Typography>
             <Grid spacing={2} container>
               <Grid size={4}>
                 <Button variant="outlined" startIcon={<CalendarSync size={16}/>} onClick={scheduleCallEvent} sx={{...ScheduleACall,
