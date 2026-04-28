@@ -132,7 +132,7 @@ export default function DesktopViewPort() {
 
   const handleDownloadCV = () => {
     window.open(
-    "https://drive.google.com/uc?export=download&id=1rtApoh0XeyYioJHxUaMxRknp4Se6gsd3",
+    "https://drive.google.com/uc?export=download&id=1AoVA7mhtfzMxgyS82MHTx-X_a2lNXwiD",
     "_blank"
     );
   }
