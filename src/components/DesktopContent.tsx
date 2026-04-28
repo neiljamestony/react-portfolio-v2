@@ -15,24 +15,24 @@ export default function DesktopContent() {
         <Stack spacing={1}>
             <DesktopViewPort/>
             <Grid container>
-            <Grid size={12}>
-                <About/>
-            </Grid>
-            <Grid size={12}>
-            <Experience/>
-            </Grid>
-            <Grid size={12}>
-                <TechStack/>
-            </Grid>
-            <Grid size={12}>
-                <Social/>
-            </Grid>
-            <Grid size={12}>
-                <Projects/>
-            </Grid>
-            <Grid size={12}>
-                <Recommendations/>
-            </Grid>
+                <Grid size={12}>
+                    <About/>
+                </Grid>
+                <Grid size={12}>
+                <Experience/>
+                </Grid>
+                <Grid size={12}>
+                    <TechStack/>
+                </Grid>
+                <Grid size={12}>
+                    <Social/>
+                </Grid>
+                <Grid size={12}>
+                    <Projects/>
+                </Grid>
+                <Grid size={12}>
+                    <Recommendations/>
+                </Grid>
             </Grid>
         </Stack>
     </Container>

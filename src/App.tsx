@@ -22,7 +22,7 @@ function App() {
     <Box>
       {isMobile ? <MobileContent/> : isTablet ? <TabletContent/> : <DesktopContent/>}
       <Footer/>
-      </Box>
+    </Box>
   )
 }
 

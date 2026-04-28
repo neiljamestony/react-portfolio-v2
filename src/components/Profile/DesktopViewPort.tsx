@@ -145,8 +145,8 @@ export default function DesktopViewPort() {
 
   return (
     <Box>
-      <Grid container spacing={1}>
-        <Grid size={2.5} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+      <Grid container>
+        <Grid size={2.5}>
           <Box
             component="img"
             src="/image/profile.jpeg"
@@ -173,7 +173,7 @@ export default function DesktopViewPort() {
               <CircleUser size={16} color={theme === "dark" ? "#fff" : "black" }/>
               <Typography variant="subtitle2" sx={{...Location, color: theme === "dark" ? "#fff" : "black" }}>Software Engineer</Typography>
             </Box>
-            <Grid spacing={2} container>
+            <Grid spacing={1} container>
               <Grid size={4}>
                 <Button variant="outlined" startIcon={<CalendarSync size={16}/>} onClick={scheduleCallEvent} sx={{...ScheduleACall,
                   backgroundColor: theme === "dark" ? "#fff" : "black",

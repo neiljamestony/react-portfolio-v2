@@ -27,7 +27,7 @@ export default function TabletViewPort() {
 
   return (
     <Box>
-      <Grid container spacing={1}>
+      <Grid container>
         <Grid size={3}>
           <Box
             component="img"
@@ -58,7 +58,7 @@ export default function TabletViewPort() {
               <CircleUser size={16} color={theme === "dark" ? "#fff" : "black" }/>
               <Typography variant="subtitle2" sx={{...Location, color: theme === "dark" ? "#fff" : "black" }}>Software Engineer</Typography>
             </Box>
-            <Grid spacing={2} container>
+            <Grid container spacing={1}>
               <Grid size={4}>
                 <Button variant="outlined" startIcon={<CalendarSync size={16}/>} onClick={scheduleCallEvent} sx={{...ScheduleACall,
                   backgroundColor: theme === "dark" ? "#fff" : "black",
