@@ -1,4 +1,3 @@
-import React from 'react'
 import { Grid, Stack } from '@mui/material'
 import TabletViewPort from './Profile/TabletViewPort'
 import About from './About/About'
