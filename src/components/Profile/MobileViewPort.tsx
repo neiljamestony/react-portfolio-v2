@@ -63,9 +63,7 @@ export default function MobileViewPort() {
                         display="flex"
                         justifyContent="space-between"
                         alignItems="center"
-                        sx={{
-                        width: '100%',
-                        }}
+                       
                     >
                         <Box sx={{ overflow: 'hidden' }}>
                             <Typography

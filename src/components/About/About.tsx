@@ -7,7 +7,7 @@ export default function About() {
     return (
         <Box mb={2}>
             <Box sx={{...AboutTitle, color: theme === "dark" ? "#fff" : "black"}}>About</Box>
-            <Box sx={{ padding: 0, margin: '3px 0 0 1.5px' }}>
+            <Box sx={{ padding: 0, margin: 0 }}>
                 <Stack spacing={1}>
                     <Typography variant="body2" sx={{...AboutDescription, color: theme === "dark" ? "#fff" : "text.secondary" }}>
                         I am a Web Developer from 📍 Metro Manila with 6 years of hands-on experience in building modern, 
