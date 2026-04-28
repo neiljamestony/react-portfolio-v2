@@ -65,18 +65,23 @@ export default function MobileViewPort() {
                         alignItems="center"
                        
                     >
-                        <Box sx={{ overflow: 'hidden' }}>
+                        <Box sx={{ overflow: 'hidden', display: "flex" }}>
                             <Typography
                                 sx={{
-                                ...ProfileName,
-                                color: theme === "dark" ? "#fff" : "black",
-                                fontSize: 13,
-                                lineHeight: 1,
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: 0.5,
+                                    ...ProfileName,
+                                    color: theme === "dark" ? "#fff" : "black",
+                                    fontSize: 13,
+                                    lineHeight: 1,
+                                    display: 'flex',
+                                    alignItems: 'center',
+                                    gap: 0.5,
+                                    overflow: 'hidden',
+                                    textOverflow: 'ellipsis',
+                                    whiteSpace: 'nowrap',
                                 }}> Neil Perdigon
-                                <Box
+                                
+                            </Typography>
+                            <Box
                                 component="img"
                                 src="/image/metaicon.png"
                                 alt="meta-icon"
@@ -84,8 +89,7 @@ export default function MobileViewPort() {
                                     height: 16,
                                     width: 16,
                                 }}
-                                />
-                            </Typography>
+                            />
                         </Box>
 
                         <FormControlLabel
