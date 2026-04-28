@@ -27,86 +27,135 @@ export default function MobileViewPort() {
 
     return (
         <>
-            <Grid container spacing={1}>
-                <Grid size={12}>
-                    <Grid container>
-                        <Grid size={5}>
-                            <Box
-                                component="img"
-                                src="/image/profile.jpeg"
-                                alt="profile-img"
-                                sx={MobileProfileImageContainer}
-                            />
-                        </Grid>
-                        <Grid size={7}>
-                            <Stack spacing={1}>
-                                <Box
-                                    display="flex"
-                                    justifyContent="space-between"
-                                    alignItems="center"
-                                    sx={{
-                                        width: '100%',
-                                        px: 1,
-                                        padding: 0,
-                                        margin: 0
-                                    }}>
-                                    <Box display="flex" justifyContent="space-between" alignItems="center">
-                                        <Typography
-                                            sx={{
-                                            ...ProfileName,
-                                            color: theme === "dark" ? "#fff" : "black",
-                                            fontSize: 17,
-                                            lineHeight: 1 }}>Neil Perdigon
-                                                <Box
-                                                    component="img"
-                                                    src="/image/metaicon.png"
-                                                    alt="meta-icon"
-                                                    sx={{
-                                                        height: 18,
-                                                        width: 18,
-                                                }}/>
-                                            </Typography>
+            <Box
+                sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    width: '100%',
+                    gap: 3,
+                    padding: 1.5
+                }}>
+                <Box
+                    sx={{
+                        width: '35%',
+                        display: 'flex',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        flexShrink: 0,
+                    }}>
+                    <Box
+                    component="img"
+                    src="/image/profile.jpeg"
+                    alt="profile-img"
+                    sx={{
+                        ...MobileProfileImageContainer
+                    }}
+                    />
+                </Box>
+                <Box
+                    sx={{
+                    width: '65%',
+                    overflow: 'hidden',
+                    }}
+                >
+                    <Stack spacing={1}>
+                    <Box
+                        display="flex"
+                        justifyContent="space-between"
+                        alignItems="center"
+                        sx={{
+                        width: '100%',
+                        }}
+                    >
+                        <Box sx={{ overflow: 'hidden' }}>
+                        <Typography
+                            sx={{
+                            ...ProfileName,
+                            color: theme === "dark" ? "#fff" : "black",
+                            fontSize: 13,
+                            lineHeight: 1,
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: 0.5,
+                            }}
+                        >
+                            Neil Perdigon
 
-                                            
-                                        </Box>
-                                        <FormControlLabel
-                                            sx={{ m: 0 }}
-                                            value="bottom"
-                                            control={<MaterialUISwitchMobile />}
-                                            label=""
-                                            onChange={() =>
-                                            dispatch(setTheme(theme === "light" ? "dark" : "light"))
-                                            }
-                                            labelPlacement="bottom"
-                                        />
-                                    </Box>
-                                <Typography
-                                    variant="subtitle2"
-                                    sx={{
-                                        ...Location,
-                                        color: theme === "dark" ? "#fff" : "black",
-                                        fontSize: 13,
-                                        maxWidth: 140, // adjust width
-                                        overflow: 'hidden',
-                                        textOverflow: 'ellipsis',
-                                        whiteSpace: 'nowrap',
-                                    }}
-                                    >
-                                    📍 Metro Manila, Philippines
-                                    </Typography>
-                                    <Box display="flex" alignItems="center" justifyContent="initial" gap={0.5} mb={1}>
-                                        <CircleUser size={16} color={theme === "dark" ? "#fff" : "black" }/>
-                                        <Typography variant="subtitle2" sx={{...Location, color: theme === "dark" ? "#fff" : "black" }}>Software Engineer</Typography>
-                                    </Box>
-                                    <Button variant="outlined" onClick={scheduleCallEvent} sx={{...ScheduleACall, backgroundColor: theme === "dark" ? "#fff" : "black",
-                                        color: theme === "dark" ? "black" : "#fff"}}>
-                                        <CalendarSync size={16}/> Schedule a call
-                                    </Button>
-                            </Stack>
-                        </Grid>
-                    </Grid>
-                </Grid>
-            </Grid>
+                            <Box
+                            component="img"
+                            src="/image/metaicon.png"
+                            alt="meta-icon"
+                            sx={{
+                                height: 16,
+                                width: 16,
+                            }}
+                            />
+                        </Typography>
+                        </Box>
+
+                        <FormControlLabel
+                            sx={{ m: 0 }}
+                            value="bottom"
+                            control={<MaterialUISwitchMobile />}
+                            label=""
+                            onChange={() =>
+                                dispatch(setTheme(theme === "light" ? "dark" : "light"))
+                            }
+                            labelPlacement="bottom"
+                            />
+                    </Box>
+
+                    <Typography
+                        variant="subtitle2"
+                        sx={{
+                        ...Location,
+                        color: theme === "dark" ? "#fff" : "black",
+                        fontSize: 12,
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                        whiteSpace: 'nowrap',
+                        }}
+                    >
+                        📍 Metro Manila, Philippines
+                    </Typography>
+
+                    <Box
+                        display="flex"
+                        alignItems="center"
+                        gap={0.5}
+                    >
+                        <CircleUser
+                        size={16}
+                        color={theme === "dark" ? "#fff" : "black"}
+                        />
+
+                        <Typography
+                        variant="subtitle2"
+                        sx={{
+                            ...Location,
+                            color: theme === "dark" ? "#fff" : "black",
+                            fontSize: 12,
+                        }}
+                        >
+                        Software Engineer
+                        </Typography>
+                    </Box>
+
+                        <Button
+                            variant="outlined"
+                            onClick={scheduleCallEvent}
+                            sx={{
+                            ...ScheduleACall,
+                            backgroundColor: theme === "dark" ? "#fff" : "black",
+                            color: theme === "dark" ? "black" : "#fff",
+                            }}
+                        >
+                            <CalendarSync size={16} />
+                            &nbsp;Schedule a call
+                        </Button>
+                    </Stack>
+                </Box>
+                </Box>
             <Grid container spacing={1}>
                 <Grid size={6}>
                     <Button variant="outlined" sx={{...SendEmail,

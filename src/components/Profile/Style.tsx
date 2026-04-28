@@ -19,7 +19,7 @@ export const ProfileName = {
 
 export const Location = {
     fontFamily: 'Poppins, sans-serif',
-    fontSize: 13
+    fontSize: 12
 }
 
 export const ScheduleACall = {
@@ -27,7 +27,7 @@ export const ScheduleACall = {
     borderColor: 'black', 
     textTransform: 'none', 
     width: '100%', 
-    fontSize: 12, 
+    fontSize: 10, 
     fontWeight: 400, 
     fontStyle: 'normal'
 }
