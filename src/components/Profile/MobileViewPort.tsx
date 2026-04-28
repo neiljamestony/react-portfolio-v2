@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Grid, Box, Typography, Button, FormControlLabel, Stack } from '@mui/material'
-import { CalendarSync, MailPlus, Download, CircleUser } from 'lucide-react'
+import { CalendarSync, MailPlus, Download } from 'lucide-react'
 import { MobileProfileImageContainer, ProfileName, Location, SendEmail, ScheduleACall } from './Style'
 import { setTheme } from '../../redux/reducer/ThemeReducer'
 import { useAppSelector, useAppDispatch } from '../../redux/hook/hook'
@@ -114,27 +114,14 @@ export default function MobileViewPort() {
                         📍 Metro Manila, Philippines
                     </Typography>
 
-                    <Box
-                        display="flex"
-                        alignItems="center"
-                        gap={0.5}
-                    >
-                        <CircleUser
-                        size={16}
-                        color={theme === "dark" ? "#fff" : "black"}
-                        />
-
-                        <Typography
+                    <Typography
                         variant="subtitle2"
                         sx={{
                             ...Location,
                             color: theme === "dark" ? "#fff" : "black",
                             fontSize: 12,
-                        }}
-                        >
-                        Software Engineer
-                        </Typography>
-                    </Box>
+                        }}>Software Engineer
+                    </Typography>
 
                         <Button
                             variant="outlined"

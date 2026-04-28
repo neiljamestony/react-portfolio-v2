@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Grid, Box, Stack, Typography, Button, FormControlLabel, Switch } from '@mui/material'
 import { ProfileName, ProfileImageContainer, Location, ScheduleACall, SendEmail } from './Style'
 import { styled } from '@mui/material/styles'
-import { CalendarSync, MailPlus, Download, CircleUser } from 'lucide-react'
+import { CalendarSync, MailPlus, Download } from 'lucide-react'
 import SendEmailComponent from '../SendEmail/SendEmail'
 import { useAppSelector, useAppDispatch } from '../../redux/hook/hook'
 import { setTheme } from '../../redux/reducer/ThemeReducer'
@@ -169,10 +169,7 @@ export default function DesktopViewPort() {
               />
             </Box>
             <Typography variant="subtitle2" sx={{...Location, color: theme === "dark" ? "#fff" : "black" }}>📍 Metro Manila, Philippines</Typography>
-            <Box display="flex" alignItems="center" justifyContent="initial" gap={0.5} mb={1}>
-              <CircleUser size={16} color={theme === "dark" ? "#fff" : "black" }/>
-              <Typography variant="subtitle2" sx={{...Location, color: theme === "dark" ? "#fff" : "black" }}>Software Engineer</Typography>
-            </Box>
+            <Typography variant="subtitle2" sx={{...Location, color: theme === "dark" ? "#fff" : "black" }}>Software Engineer</Typography>
             <Grid spacing={1} container>
               <Grid size={4}>
                 <Button variant="outlined" startIcon={<CalendarSync size={16}/>} onClick={scheduleCallEvent} sx={{...ScheduleACall,

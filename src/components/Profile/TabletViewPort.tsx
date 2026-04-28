@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Grid, Box, Typography, Button, FormControlLabel, Stack } from '@mui/material'
-import { CalendarSync, MailPlus, Download, CircleUser } from 'lucide-react'
+import { CalendarSync, MailPlus, Download } from 'lucide-react'
 import { ProfileImageContainer, ProfileName, Location, SendEmail, ScheduleACall } from './Style'
 import SendEmailComponent from '../SendEmail/SendEmail'
 import { useAppSelector, useAppDispatch } from '../../redux/hook/hook'
@@ -27,7 +27,7 @@ export default function TabletViewPort() {
 
   return (
     <Box>
-      <Grid container>
+      <Grid container spacing={3}>
         <Grid size={3}>
           <Box
             component="img"
@@ -36,33 +36,31 @@ export default function TabletViewPort() {
             sx={ProfileImageContainer}
           />
         </Grid>
-        <Grid size={9}>
-          <Stack spacing={2}>
-            <Grid container>
-              <Grid size={10}>
-                  <Typography variant="h6" gutterBottom sx={{...ProfileName, color: theme === "dark" ? "#fff" : "black" }}>Neil James Tony Perdigon
+        <Grid size={9} sx={{ padding: 1}}>
+          <Stack spacing={0.5}>
+            <Box display="flex">
+              <Box flexGrow={1}>
+                <Typography variant="h6" gutterBottom sx={{...ProfileName, color: theme === "dark" ? "#fff" : "black" }}>Neil James Tony Perdigon
                     <Box component="img" src="/image/metaicon.png" alt="meta-icon" sx={{ height: 20, width: 20, mt: -1 }}/>
                   </Typography>
-              </Grid>
-              <Grid size={2}>
+              </Box>
+              <Box>
                 <FormControlLabel
                   control={<MaterialUISwitch sx={{ m: 0 }} />}
                   label=""
                   onChange={() => dispatch(setTheme(theme === "light" ? "dark" : "light"))}
                   labelPlacement="bottom"
                 />
-              </Grid>
-            </Grid>
-            <Typography variant="subtitle2" sx={{...Location, color: theme === "dark" ? "#fff" : "black" }}>📍 Metro Manila, Philippines</Typography>
-            <Box display="flex" alignItems="center" justifyContent="initial" gap={0.5} mb={1}>
-              <CircleUser size={16} color={theme === "dark" ? "#fff" : "black" }/>
-              <Typography variant="subtitle2" sx={{...Location, color: theme === "dark" ? "#fff" : "black" }}>Software Engineer</Typography>
+              </Box>
             </Box>
-            <Grid container spacing={1}>
+            <Typography variant="subtitle2" sx={{...Location, color: theme === "dark" ? "#fff" : "black" }}>📍 Metro Manila, Philippines</Typography>
+            <Typography variant="subtitle2" sx={{...Location, color: theme === "dark" ? "#fff" : "black" }}>Software Engineer</Typography>
+            <Grid container spacing={0.5} sx={{ paddingTop: 3 }}>
               <Grid size={4}>
                 <Button variant="outlined" startIcon={<CalendarSync size={16}/>} onClick={scheduleCallEvent} sx={{...ScheduleACall,
                   backgroundColor: theme === "dark" ? "#fff" : "black",
-                  color: theme === "dark" ? "black" : "#fff"
+                  color: theme === "dark" ? "black" : "#fff",
+                  fontSize: 12
                 }}>
                   Schedule a call
                 </Button>
@@ -70,7 +68,8 @@ export default function TabletViewPort() {
               <Grid size={4}>
                 <Button variant="outlined" startIcon={<MailPlus size={16}/>} sx={{...SendEmail,
                   color: theme === "dark" ? "#fff" : "black",
-                  borderColor: theme === "dark" ? "#fff" : "black"
+                  borderColor: theme === "dark" ? "#fff" : "black",
+                  fontSize: 12
                 }} onClick={() => setOpen(true)}>
                   Send Email
                 </Button>
@@ -78,7 +77,8 @@ export default function TabletViewPort() {
               <Grid size={4}>
                 <Button onClick={handleDownloadCV} variant="outlined" startIcon={<Download size={16}/>} sx={{...SendEmail,
                   color: theme === "dark" ? "#fff" : "black",
-                  borderColor: theme === "dark" ? "#fff" : "black"
+                  borderColor: theme === "dark" ? "#fff" : "black",
+                  fontSize: 12
                 }}>
                   Download CV
                 </Button>
