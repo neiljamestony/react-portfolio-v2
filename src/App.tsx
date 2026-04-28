@@ -1,5 +1,5 @@
 import './App.css'
-import { Container, useMediaQuery, useTheme } from '@mui/material'
+import { Box, useMediaQuery, useTheme } from '@mui/material'
 import { useEffect } from 'react'
 
 import MobileContent from './components/MobileContent'
@@ -19,10 +19,10 @@ function App() {
   }, [currentTheme]);
 
   return(
-    <Container maxWidth="md">
+    <Box>
       {isMobile ? <MobileContent/> : isTablet ? <TabletContent/> : <DesktopContent/>}
       <Footer/>
-      </Container>
+      </Box>
   )
 }
 

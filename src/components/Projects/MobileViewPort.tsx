@@ -29,9 +29,9 @@ export default function MobileViewPort() {
   }
 
   return (
-    <Box sx={{ height: 200 }}>
-        <Box sx={{...MobileProjectTitle, color: theme === "dark" ? "#fff" : "black"}}>Projects</Box>
-        <Box mt={3} ml={1.5}>
+    <Box mb={2}>
+        <Box sx={{...MobileProjectTitle, color: theme === "dark" ? "#fff" : "black", marginBottom: 3 }}>Projects</Box>
+        <Box sx={{ padding: 0, margin: 0 }}>
             <Stack spacing={1}>
             {
                 projects.map((project, index) => (

@@ -61,13 +61,14 @@ export const MobileExperienceTitle = {
 export const MobileExperienceContainer = {
     position: 'relative',
     paddingLeft: 3, 
-    marginTop: 4
+    marginTop: 4,
+    padding: 0
 }
 
 export const MobileExperienceDataContainer = {
     position: 'relative',
     marginBottom: 4,
-    marginLeft: 2
+    marginLeft: 4
 }
 
 export const MobileExperienceTimelineBox = {

@@ -33,7 +33,7 @@ export default function MobileViewPort() {
   ];
 
   return (
-    <Box sx={{ height: 250, marginTop: 10 }}>
+    <Box>
         <Box sx={{...MobileViewPortRecommendationTitle, color: theme === "dark" ? "#fff" : "black"}}>Recommendations</Box>
         <Box mt={5}>
             <Swiper

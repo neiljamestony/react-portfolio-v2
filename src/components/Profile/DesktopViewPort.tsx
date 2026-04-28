@@ -63,6 +63,74 @@ export const MaterialUISwitch = styled(Switch)(({ theme }) => ({
   },
 }));
 
+export const MaterialUISwitchMobile = styled(Switch)(({ theme }) => ({
+  width: 46,
+  height: 26,
+  padding: 4,
+
+  '& .MuiSwitch-switchBase': {
+    margin: 1,
+    padding: 0,
+    transform: 'translateX(3px)',
+
+    '&.Mui-checked': {
+      color: '#fff',
+      transform: 'translateX(18px)',
+
+      '& .MuiSwitch-thumb:before': {
+        backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="14" width="14" viewBox="0 0 20 20"><path fill="${encodeURIComponent(
+          '#fff',
+        )}" d="M4.2 2.5l-.7 1.8-1.8.7 1.8.7.7 1.8.6-1.8L6.7 5l-1.9-.7-.6-1.8zm15 8.3a6.7 6.7 0 11-6.6-6.6 5.8 5.8 0 006.6 6.6z"/></svg>')`,
+      },
+
+      '& + .MuiSwitch-track': {
+        opacity: 1,
+        backgroundColor: '#aab4be',
+
+        ...theme.applyStyles('dark', {
+          backgroundColor: '#8796A5',
+        }),
+      },
+    },
+  },
+
+  '& .MuiSwitch-thumb': {
+    backgroundColor: '#001e3c',
+    width: 22,
+    height: 22,
+
+    '&::before': {
+      content: "''",
+      position: 'absolute',
+      width: '100%',
+      height: '100%',
+      left: 0,
+      top: 0,
+      backgroundRepeat: 'no-repeat',
+      backgroundPosition: 'center',
+      backgroundSize: '12px',
+
+      backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="14" width="14" viewBox="0 0 20 20"><path fill="${encodeURIComponent(
+        '#fff',
+      )}" d="M9.305 1.667V3.75h1.389V1.667h-1.39zm-4.707 1.95l-.982.982L5.09 6.072l.982-.982-1.473-1.473zm10.802 0L13.927 5.09l.982.982 1.473-1.473-.982-.982zM10 5.139a4.872 4.872 0 00-4.862 4.86A4.872 4.872 0 0010 14.862 4.872 4.872 0 0014.86 10 4.872 4.872 0 0010 5.139zm0 1.389A3.462 3.462 0 0113.471 10a3.462 3.462 0 01-3.473 3.472A3.462 3.462 0 016.527 10 3.462 3.462 0 0110 6.528zM1.665 9.305v1.39h2.083v-1.39H1.666zm14.583 0v1.39h2.084v-1.39h-2.084zM5.09 13.928L3.616 15.4l.982.982 1.473-1.473-.982-.982zm9.82 0l-.982.982 1.473 1.473.982-.982-1.473-1.473zM9.305 16.25v2.083h1.389V16.25h-1.39z"/></svg>')`,
+    },
+
+    ...theme.applyStyles('dark', {
+      backgroundColor: '#003892',
+    }),
+  },
+
+  '& .MuiSwitch-track': {
+    opacity: 1,
+    backgroundColor: '#aab4be',
+    borderRadius: 13,
+
+    ...theme.applyStyles('dark', {
+      backgroundColor: '#8796A5',
+    }),
+  },
+}));
+
 export default function DesktopViewPort() {
   const dispatch = useAppDispatch();
   const { theme } = useAppSelector((state) => state.themeState)
@@ -94,16 +162,11 @@ export default function DesktopViewPort() {
         </Grid>
         <Grid size={9.5}>
           <Stack spacing={1}>
-            <Box display="flex" alignItems="center" gap={0.5}>
-              <Typography variant="h6" gutterBottom sx={{...ProfileName, color: theme === "dark" ? "#fff" : "black" }}>Neil James Tony Perdigon</Typography>
-              <Box component="img" src="/image/metaicon.png" alt="meta-icon" sx={{ height: 20, width: 20, mt: -1 }}/>
-            </Box>
-            <Box display="flex" alignItems="center" justifyContent="initial" gap={0.5} mb={1}>
-              <CircleUser size={16} color={theme === "dark" ? "#fff" : "black" }/>
-              <Typography variant="subtitle2" sx={{...Location, color: theme === "dark" ? "#fff" : "black" }}>Software Engineer</Typography>
-            </Box>
-            <Box display="flex" justifyContent="space-between" alignItems="center" gap={0.5} sx={{ padding: 0 }}>
-              <Typography variant="subtitle2" sx={{...Location, color: theme === "dark" ? "#fff" : "black" }}>📍 Metro Manila, Philippines</Typography>
+            <Box display="flex" justifyContent="space-between" alignItems="center">
+              <Box display="flex" alignItems="center" gap={0.5}>
+                <Typography variant="h6" gutterBottom sx={{...ProfileName, color: theme === "dark" ? "#fff" : "black" }}>Neil James Tony Perdigon</Typography>
+                <Box component="img" src="/image/metaicon.png" alt="meta-icon" sx={{ height: 20, width: 20, mt: -1 }}/>
+              </Box>
               <FormControlLabel
                 control={<MaterialUISwitch sx={{ m: 1 }} defaultChecked />}
                 label=""
@@ -111,6 +174,12 @@ export default function DesktopViewPort() {
                 labelPlacement="bottom"
               />
             </Box>
+            
+            <Box display="flex" alignItems="center" justifyContent="initial" gap={0.5} mb={1}>
+              <CircleUser size={16} color={theme === "dark" ? "#fff" : "black" }/>
+              <Typography variant="subtitle2" sx={{...Location, color: theme === "dark" ? "#fff" : "black" }}>Software Engineer</Typography>
+            </Box>
+            <Typography variant="subtitle2" sx={{...Location, color: theme === "dark" ? "#fff" : "black" }}>📍 Metro Manila, Philippines</Typography>
             <Grid spacing={2} container>
               <Grid size={4}>
                 <Button variant="outlined" startIcon={<CalendarSync size={16}/>} onClick={scheduleCallEvent} sx={{...ScheduleACall,

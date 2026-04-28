@@ -1,4 +1,4 @@
-import { Stack, Grid, Box } from '@mui/material'
+import { Stack, Grid, Container } from '@mui/material'
 import MobileViewPort from './Profile/MobileViewPort'
 
 import MobileViewPortTechStack from './TechStack/MobileViewPort'
@@ -11,7 +11,7 @@ import About from './About/About'
 
 export default function MobileContent() {
   return (
-    <Box sx={{ margin: 0, padding: 0}}>
+    <Container maxWidth="md" sx={{ margin: 0, padding: 0 }}>
         <Stack spacing={1}>
             <MobileViewPort/>
             <Grid container spacing={1}>
@@ -35,6 +35,6 @@ export default function MobileContent() {
                 </Grid>
             </Grid>
         </Stack>
-    </Box>
+    </Container>
   )
 }

@@ -33,8 +33,8 @@ export default function MobileViewPort() {
 
     return (
         <Box mb={2}>
-            <Box sx={{...MobileViewPortTechStackTitle, color: theme === "dark" ? "#fff" : "black"}}>Tech Stack</Box>
-            <Box mt={3} ml={1.5}>
+            <Box sx={{...MobileViewPortTechStackTitle, color: theme === "dark" ? "#fff" : "black", marginBottom: 3 }}>Tech Stack</Box>
+            <Box sx={{ padding: 0, margin: 0 }}>
                 <Stack spacing={1}>
                     <Box>
                         <Typography variant="body1" sx={{...SubHeaderTitle, color: theme === "dark" ? "#fff" : "black"}}>Frontend</Typography>

@@ -5,13 +5,21 @@ export const ProfileImageContainer = {
     objectFit: 'cover',
 }
 
+export const MobileProfileImageContainer = {
+    width: 130,
+    height: 130,
+    borderRadius: '8px',
+    objectFit: 'cover',
+}
+
 export const ProfileName = {
     fontFamily: 'Poppins, sans-serif',
     fontWeight: 'bold'
 }
 
 export const Location = {
-    fontFamily: 'Poppins, sans-serif'
+    fontFamily: 'Poppins, sans-serif',
+    fontSize: 13
 }
 
 export const ScheduleACall = {
