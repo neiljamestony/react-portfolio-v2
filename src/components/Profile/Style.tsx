@@ -38,5 +38,8 @@ export const SendEmail = {
     width: '100%', 
     fontSize: 12, 
     fontWeight: 400, 
-    fontStyle: 'normal'
+    fontStyle: 'normal',
+    '&:disabled': {
+        color: '#fff'
+    }
 }
