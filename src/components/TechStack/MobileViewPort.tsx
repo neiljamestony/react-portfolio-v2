@@ -27,6 +27,7 @@ export default function MobileViewPort() {
     ];
 
     const devOpsTech = [
+        "Azure Devops",
         "Azure",
         "Git",
         "GitHub",
@@ -81,7 +82,7 @@ export default function MobileViewPort() {
                         </Box>     
                     </Box>
                     <Box>
-                        <Typography variant="body1" sx={{...SubHeaderTitle, color: theme === "dark" ? "#fff" : "black"}}>Devops & Cloud</Typography>
+                        <Typography variant="body1" sx={{...SubHeaderTitle, color: theme === "dark" ? "#fff" : "black"}}>CI / CD & DevOps</Typography>
                         <Box sx={SubHeaderContentContainer}>
                             {devOpsTech.map((tech, index) => (
                                 <Typography key={index} variant="caption" sx={{...SubHeaderContent,
