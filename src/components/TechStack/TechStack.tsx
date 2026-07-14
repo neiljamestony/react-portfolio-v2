@@ -11,7 +11,8 @@ export default function TechStack() {
         "Next.js",
         "React Testing Library",
         "Jest",
-        "Mocha & Chai"
+        "Mocha & Chai",
+        "JWT"
     ];
 
     const backendTech = [
@@ -21,7 +22,8 @@ export default function TechStack() {
         "Laravel",
         "MongoDB",
         "MySQL",
-        "PostgreSQL"
+        "PostgreSQL",
+        "Prisma"
     ];
 
     const devOpsTech = [
