@@ -22,6 +22,10 @@ export default function MobileViewPort() {
       name: "Contact App",
       repoLink: "https://github.com/neiljamestony/contact-app"
     },
+    {
+      name: "Navtask",
+      repoLink: "https://navtask-fe-new-one.vercel.app/"
+    }
   ];
 
   const openLink = (url: string) => {
