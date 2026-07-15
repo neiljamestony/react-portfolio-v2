@@ -24,7 +24,7 @@ export default function Projects() {
     },
     {
       name: "Navtask",
-      repoLink: "https://navtask-fe-new-one.vercel.app/"
+      repoLink: "https://navtask-fe-new.vercel.app/"
     },
   ];
 
