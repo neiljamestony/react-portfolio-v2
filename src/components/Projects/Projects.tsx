@@ -26,6 +26,10 @@ export default function Projects() {
       name: "Navtask",
       repoLink: "https://navtask-fe-new.vercel.app/"
     },
+    {
+      name: "NutStuff",
+      repoLink: "https://nutstuff.vercel.app/"
+    }
   ];
 
   const openLink = (url: string) => {

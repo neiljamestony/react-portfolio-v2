@@ -25,6 +25,10 @@ export default function MobileViewPort() {
     {
       name: "Navtask",
       repoLink: "https://navtask-fe-new.vercel.app/"
+    },
+    {
+      name: "NutStuff",
+      repoLink: "https://nutstuff.vercel.app/"
     }
   ];
 
